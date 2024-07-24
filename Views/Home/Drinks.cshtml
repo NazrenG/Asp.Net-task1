@@ -1,0 +1,30 @@
+﻿@model IEnumerable< WebApplication1.Entities.Drink>
+
+ 
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Drinks</title>
+</head>
+<body>
+	<div>
+<h4 style="color:deepskyblue">Drink</h4>
+<hr style="border:2px solid deepskyblue" />
+
+		@foreach (var item in Model)
+		{
+			<h5>Name: @item.Name</h5> 
+			<h5>Type: @item.Type</h5> 
+			<h5>Price: @item.Price$</h5>
+			<hr style="border-color:deepskyblue" />
+		}
+</div>
+
+<div>
+    <a href="/home">Back to Home</a>
+</div>
+ 
+</body>
+</html>

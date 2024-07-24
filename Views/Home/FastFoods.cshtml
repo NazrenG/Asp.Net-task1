@@ -1,0 +1,38 @@
+﻿@model IEnumerable<WebApplication1.Entities.FastFood>
+
+<DOCTYPE !html>
+
+	<html>
+	<head>
+		<meta name="viewport" content="width=device-width" />
+		<title>FastFoods</title>
+
+	</head>
+	<body>
+		<div>
+			<h4 style="color:brown">FastFood</h4>
+			<hr style="border:2px solid brown" />
+			@foreach (var item in Model)
+			{
+				<h5>Name: @item.Name</h5>
+				<h5>Type: @item.FoodType</h5>
+				<h5>Ingredients: </h5>
+				<p>
+					@foreach (var i in item.Ingredients)
+					{
+						<span>@i,</span>
+					}
+				</p>
+				<h5>Price: @item.Price$</h5>
+				<h5>Calories: @item.Calories</h5>
+				<h5>Vegetarian: @item.IsVegetarian</h5>
+				<hr style="border-color:brown" />
+			}
+
+		</div>
+		<div>
+			<a href="/home">Back to Home</a>
+		</div>
+	</body>
+</html>
+</DOCTYPE>

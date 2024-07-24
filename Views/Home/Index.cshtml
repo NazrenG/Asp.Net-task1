@@ -1,0 +1,69 @@
+﻿@model WebApplication1.Models.FoodViewModel
+
+<DOCTYPE! html>
+	<html>
+	<head>
+		<title>
+			FoodViewModel
+		</title>
+	</head>
+	<body>
+
+		<div>
+			<h4 style="color:chocolate">HotMeal</h4>
+			<hr style="border:2px solid chocolate" />
+			@foreach (var item in Model.Meals)
+			{
+				<h5>Name: @item.Name</h5>
+				<h5>Type: @item.FoodType</h5>
+				<h5>Ingredients: </h5>
+				<p>
+					@foreach (var i in item.Ingredients)
+					{
+						<span>@i,</span>
+					}
+				</p>
+
+				<h5>Price: @item.Price$</h5>
+				<h5>Vegetarian: @item.IsVegetarian</h5>
+				<hr style="border-color:chocolate" />
+			}
+
+		</div>
+		<div>
+			<h4 style="color:brown">FastFood</h4>
+			<hr style="border:2px solid brown" />
+			@foreach (var item in Model.Foods)
+			{
+				<h5>Name: @item.Name</h5>
+				<h5>Type: @item.FoodType</h5>
+				<h5>Ingredients: </h5>
+				<p>
+					@foreach (var i in item.Ingredients)
+					{
+						<span>@i,</span>
+					}
+				</p>
+				<h5>Price: @item.Price$</h5>
+				<h5>Calories: @item.Calories</h5>
+				<h5>Vegetarian: @item.IsVegetarian</h5>
+				<hr style="border-color:brown" />
+			}
+
+		</div>
+		<div>
+			<h4 style="color:deepskyblue">Drink</h4>
+			<hr style="border:2px solid deepskyblue" />
+
+			@foreach (var item in Model.Drinks)
+			{
+				<h5>Name: @item.Name</h5>
+				<h5>Type: @item.Type</h5>
+				<h5>Price: @item.Price$</h5>
+				<hr style="border-color:deepskyblue" />
+			}
+		</div>
+
+	</body>
+</html>
+</DOCTYPE>
